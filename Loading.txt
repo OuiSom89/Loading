@@ -1,0 +1,103 @@
+local LoadingDarkScriptHub = Instance.new("ScreenGui", game:GetService("CoreGui").RobloxGui)
+LoadingDarkScriptHub.Name = "LoadingDarkScriptHub"
+
+local GUI = Instance.new("Frame", LoadingDarkScriptHub)
+GUI.Name = "GUI"
+GUI.BackgroundColor3 = Color3.fromRGB(0,0,0)
+GUI.Position = UDim2.new(0.5, -225, 0.5, -40)
+GUI.Size = UDim2.new(0, 450, 0, 80)
+GUI.Visible = false
+
+local UICornerGUI = Instance.new("UICorner", GUI)
+
+local Title = Instance.new("TextLabel", GUI)
+Title.Name = "Title"
+Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Title.Size = UDim2.new(0, 450, 0, 20)
+Title.BorderSizePixel = 0
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Font = Enum.Font.GothamBold
+Title.Text = "      DarkScriptHub"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+local UICornerTitle = Instance.new("UICorner", Title)
+LoN2 = "0"
+LoN1 = " "..LoN2.." \\ 7"
+Lo1 = "Loading."..LoN1
+Lo2 = "Loading.."..LoN1
+Lo3 = "Loading..."..LoN1
+
+local TextLoading = Instance.new("TextLabel", GUI)
+TextLoading.Name = "TextLoading"
+TextLoading.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLoading.Size = UDim2.new(0, 450, 0, 20)
+TextLoading.Position = UDim2.new(0.5, -225, 0.5, -15)
+TextLoading.BorderSizePixel = 0
+TextLoading.Font = Enum.Font.GothamBold
+TextLoading.Text = Lo1
+TextLoading.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLoading.TextSize = 14.000
+function Loading()
+TextLoading.Text = Lo1
+wait(1)
+TextLoading.Text = Lo2
+wait(1)
+TextLoading.Text = Lo3
+wait(1)
+Loading()
+end
+
+local LoadingFrame = Instance.new("Frame", GUI)
+LoadingFrame.Name = "LoadingFrame"
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(30,30,30)
+LoadingFrame.Position = UDim2.new(0.5, -200, 0.5, 5)
+LoadingFrame.Size = UDim2.new(0, 400, 0, 20)
+
+local UICornerLoadingFrame = Instance.new("UICorner", LoadingFrame)
+
+getgenv().BarreLoading1 = "rbxassetid://11176798346"
+getgenv().BarreLoading2 = "rbxassetid://11176805134"
+getgenv().BarreLoading3 = "rbxassetid://11176809941"
+getgenv().BarreLoading4 = "rbxassetid://11176812648"
+getgenv().BarreLoading5 = "rbxassetid://11176814119"
+getgenv().BarreLoading6 = "rbxassetid://11176816351"
+getgenv().BarreLoading7 = "rbxassetid://11176818483"
+
+local BarreLoading = Instance.new("ImageLabel", LoadingFrame)
+BarreLoading.Name = "BarreLoading"
+BarreLoading.BackgroundColor3 = Color3.fromRGB(30,30,30)
+BarreLoading.Position = UDim2.new(0, 0, 0, 0)
+BarreLoading.Size = UDim2.new(0, 400, 0, 20)
+BarreLoading.Image = ""
+
+local UICornerBarreLoading = Instance.new("UICorner", BarreLoading)
+
+KeyHideGUI = "j"
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+ 
+if key == KeyHideGUI then
+game:GetService("CoreGui").RobloxGui.LoadingDarkScriptHub:Destroy()
+end
+end)
+
+BarreLoading.Image = BarreLoading1
+wait(0.01)
+BarreLoading.Image = BarreLoading2
+wait(0.01)
+BarreLoading.Image = BarreLoading3
+wait(0.01)
+BarreLoading.Image = BarreLoading4
+wait(0.01)
+BarreLoading.Image = BarreLoading5
+wait(0.01)
+BarreLoading.Image = BarreLoading6
+wait(0.01)
+BarreLoading.Image = BarreLoading7
+wait(0.01)
+BarreLoading.Image = ''
+wait(0.01)
+
+GUI.Visible = true
