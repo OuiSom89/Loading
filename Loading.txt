@@ -109,3 +109,5 @@ if ID == '6206893534' then
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OuiSom89/DarkHubUI/main/.txt"))()
 end
+
+Loading()
