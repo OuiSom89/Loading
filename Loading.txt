@@ -101,3 +101,11 @@ BarreLoading.Image = ''
 wait(0.01)
 
 GUI.Visible = true
+
+ID = game.PlaceId
+
+if ID == '6206893534' then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OuiSom89/DarkHub-Corba-Kai/main/.txt"))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OuiSom89/DarkHubUI/main/.txt"))()
+end
